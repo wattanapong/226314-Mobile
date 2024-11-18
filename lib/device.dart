@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(DeviceSize());
 
 class DeviceSize extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
@@ -27,3 +27,5 @@ class DeviceSize extends StatelessWidget {
     );
   }
 }
+
+
