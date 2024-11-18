@@ -1,0 +1,32 @@
+[
+  {
+    "name": "CORE ULTRA 5 245K",
+    "price": 11590,
+    "image": "https://img.advice.co.th/images_nas/pic_product4/A0163676/A0163676_1.jpg"
+  },
+  {
+    "name": "CORE ULTRA 7 265K",
+    "price": 15490,
+    "image": "https://img.advice.co.th/images_nas/pic_product4/A0163679/A0163679_1.jpg"
+  },
+  {
+    "name": "INTEL CORE I9-14900KS",
+    "price": 26590,
+    "image": "https://img.advice.co.th/images_nas/pic_product4/A0158653/A0158653_1.jpg"
+  },
+  {
+    "name": "AMD RYZEN THREADRIPPER 7980X",
+    "price": 202900,
+    "image": "https://img.advice.co.th/images_nas/pic_product4/A0156417/A0156417_1.jpg"
+  },
+  {
+    "name": "AMD AM5 RYZEN 9 7950X3D",
+    "price": 22410,
+    "image": "https://img.advice.co.th/images_nas/pic_product4/A0161217/A0161217_1.jpg"
+  },
+  {
+    "name": "AMD AM5 RYZEN 9 9900X",
+    "price": 17840,
+    "image": "https://img.advice.co.th/images_nas/pic_product4/A0149593/A0149593_1.jpg"
+  }
+]
