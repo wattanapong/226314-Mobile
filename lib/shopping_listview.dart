@@ -49,7 +49,7 @@ class Shopping extends StatelessWidget {
                 itemBuilder: (context, index) {
                   Product product = products[index];
                   return Card(
-                    margin: EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

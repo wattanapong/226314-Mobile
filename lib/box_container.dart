@@ -7,6 +7,8 @@ class BoxContainer extends StatelessWidget {
   var itemWidth = 200.0;
   var itemHeight = 200.0;
 
+  BoxContainer({super.key});
+
   @override
   Widget build(BuildContext context) {
     var orientation = MediaQuery.of(context).orientation;

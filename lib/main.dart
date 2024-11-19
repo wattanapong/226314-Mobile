@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'calculate_utils.dart';
@@ -63,7 +62,7 @@ class _CalculatorState extends State<Calculator> {
           padding: const EdgeInsets.all(20.0),
           child: Text(
             display,
-            style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
           ),
         ),
         Row(
@@ -117,13 +116,13 @@ class _CalculatorState extends State<Calculator> {
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
         onPressed: () => onButtonPressed(label),
-        child: Text(label, style: TextStyle(fontSize: 24)),
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           // shape: CircleBorder(),
-          shape: RoundedRectangleBorder(),
-          minimumSize: Size(80, 80),
+          shape: const RoundedRectangleBorder(),
+          minimumSize: const Size(80, 80),
         ),
+        child: Text(label, style: const TextStyle(fontSize: 24)),
       ),
     );
   }

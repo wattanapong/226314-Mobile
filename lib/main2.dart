@@ -1,7 +1,5 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'calculate_utils.dart';
 
 void main() => runApp(MaterialApp(
     home: Scaffold(

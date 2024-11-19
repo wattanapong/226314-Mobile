@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(DeviceSize());
+void main() => runApp(const DeviceSize());
 
 class DeviceSize extends StatelessWidget {
+  const DeviceSize({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class DeviceSize extends StatelessWidget {
             padding: const EdgeInsets.only(top: 30),
             alignment: Alignment.topCenter,
             child: Text(
-              'width: $w, height: $h\n' + 'orientation: $orientation',
+              'width: $w, height: $h\n' 'orientation: $orientation',
               // textScaleFactor: 1.5,
               textScaler: const TextScaler.linear(1.5),
             ),
