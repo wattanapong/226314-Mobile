@@ -1,16 +1,20 @@
-# calculator
+# 226314-Mobile
+## Chapter 1: Introduction to Mobile Development
+## Chapter 2: Building an App with Flutter
+## Chapter 3: Flutter Fundamentals
+## Chapter 4: State Management
+## Chapter 5: Navigation and Routing
+1. Example of 3-Page Link 
+```
+home.dart // void main()
+|-ch5
+  | - HomePage.dart // Home Page
+  | - ProductPage.dart // Product Page
+  | - AboutPage.dart // About Page
+```
+2. 
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Chapter 6: Restful APIs
+## Chapter 7: Data Persistence
+## Chapter 8: Testing and Debugging
+## Chapter 9: Deployment and Publishing

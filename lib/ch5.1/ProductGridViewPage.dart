@@ -1,5 +1,5 @@
 
-import 'package:example/utils/service.dart';
+import '../utils/service.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,12 +10,14 @@ final Logger log = Logger();
 
 class ProductGridViewPage extends StatefulWidget {
   @override
-  _ProductGridViewPageState createState() => _ProductGridViewPageState();
+  State createState() => ProductGridViewPageState();
 }
 
-class _ProductGridViewPageState extends State<ProductGridViewPage> {
+class ProductGridViewPageState extends State<ProductGridViewPage> {
 
   List<Product> products = [];
+  int _currentIndex = 1;
+  List<String> routes = ['/', '/product', '/about'];
 
   @override
   void initState() {
@@ -35,6 +37,11 @@ class _ProductGridViewPageState extends State<ProductGridViewPage> {
   @override
   Widget build(BuildContext context) {
     log.d('starting...');
+
+    List<String> routes = ['/', '/product', '/about'];
+
+    // final index = ModalRoute.of(context)?.settings.arguments as int;
+    // _currentIndex = index??0;
 
     return MaterialApp(
         home: Scaffold(
@@ -104,7 +111,33 @@ class _ProductGridViewPageState extends State<ProductGridViewPage> {
               );
             },
           ),
-        ));
+
+            bottomNavigationBar:
+            BottomNavigationBar(
+              currentIndex: _currentIndex,
+              selectedItemColor: Colors.amber[800],
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.storefront),
+                  label: 'Product',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.info),
+                  label: 'About',
+                ),
+              ],
+              onTap: (index) =>
+                  setState(() {
+                    _currentIndex = index;
+                    Navigator.pushNamed(context, routes[index]);
+                  }),
+            )
+        )
+        );
   }
 
 
