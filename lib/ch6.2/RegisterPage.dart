@@ -1,45 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:logger/logger.dart';
 
-Logger log = Logger();
-
-class LoginPage extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Login Demo',
-      home: LoginWidget(),
+      home: RegisterWidget(),
     );
   }
 }
 
-class LoginWidget extends StatefulWidget {
+class RegisterWidget extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegisterPageState createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginWidget> {
+class _RegisterPageState extends State<RegisterWidget> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _nameController = TextEditingController();
   String? _errorMessage;
 
   Future<void> _login() async {
     final String email = _emailController.text;
     final String password = _passwordController.text;
+    final String name = _nameController.text;
 
     // Replace with your server URL
-    const String serverURL = 'https://mobile.wattanapong.com/login';
+    const String serverURL = 'https://mobile.wattanapong.com/register';
 
     try {
       final response = await http.post(
         Uri.parse(serverURL),
-        headers: <String, String> {
-      // "Access-Control-Allow-Origin": "*", // Required for CORS support to work
-      // "Access-Control-Allow-Credentials": "true", // Required for cookies, authorization headers with HTTPS
-      // "Access-Control-Allow-Methods": "POST, OPTIONS",
-          'Content-Type': 'application/json; charset=UTF-8'},
+        headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'email': email,
           'pass': password,
@@ -48,32 +43,24 @@ class _LoginPageState extends State<LoginWidget> {
 
       if (response.statusCode == 200) {
         final responseData = jsonDecode(response.body);
-        
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Login successful! '
-               'Welcome ${responseData['user']['name']}')),
+          SnackBar(content: Text('Login successful! Welcome ${responseData['user']['name']}')),
         );
-        //error can't use navigator across async
-        // Navigator.pushNamed(context, '/member');
       } else {
-        print('failed');
         final errorData = jsonDecode(response.body);
         setState(() {
           _errorMessage = errorData['message'];
         });
       }
     } catch (error) {
-      print('error $error');
       setState(() {
-        _errorMessage = 'An error occurred. Please try again. $error';
+        _errorMessage = 'An error occurred. Please try again.';
       });
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    _emailController.text = "mobileinfo@cpe.ict.up.ac.th";
-    _passwordController.text = "mobile226314";
     return Scaffold(
       appBar: AppBar(title: Text('Login')),
       body: Padding(
@@ -91,9 +78,15 @@ class _LoginPageState extends State<LoginWidget> {
               obscureText: true,
             ),
             const SizedBox(height: 20),
+            TextField(
+              controller: _nameController,
+              decoration: const InputDecoration(labelText: 'Name'),
+              obscureText: true,
+            ),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _login,
-              child: const Text('Login'),
+              child: const Text('Register'),
             ),
             if (_errorMessage != null) ...[
               const SizedBox(height: 10),
@@ -108,4 +101,3 @@ class _LoginPageState extends State<LoginWidget> {
     );
   }
 }
-

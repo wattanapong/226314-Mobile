@@ -39,6 +39,8 @@ dependencies:
   logger: ^1.1.1
   http: ^1.2.2
   shared_preferences: ^2.3.3
+  sqflite: ^2.4.1
+  camera: ^0.11.0+2
 
 dev_dependencies:
   flutter_test:

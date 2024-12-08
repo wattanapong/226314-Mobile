@@ -2,28 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:logger/logger.dart';
+import 'RegisterPage.dart';
+import 'MemberPage.dart';
 
 Logger log = Logger();
 
-class LoginPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Login Demo',
-      home: LoginWidget(),
-    );
-  }
-}
+// class LoginPage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Login Demo',
+//       home: LoginWidget(),
+//       routes: {
+//         '/': (context) => LoginPage(),
+//         '/register': (context)  =>  RegisterPage(),
+//         '/member': (context) => MemberPage(),
+//       },
+//     );
+//   }
+// }
 
-class LoginWidget extends StatefulWidget {
+class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginWidget> {
+class _LoginPageState extends State<LoginPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   String? _errorMessage;
+  Map<String, dynamic>? result;
 
   Future<void> _login() async {
     final String email = _emailController.text;
@@ -53,6 +61,11 @@ class _LoginPageState extends State<LoginWidget> {
           SnackBar(content: Text('Login successful! '
                'Welcome ${responseData['user']['name']}')),
         );
+
+        setState(() {
+          result = responseData;
+        });
+
         //error can't use navigator across async
         // Navigator.pushNamed(context, '/member');
       } else {
@@ -92,7 +105,12 @@ class _LoginPageState extends State<LoginWidget> {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _login,
+              onPressed: () async {
+                 await _login();
+                if (result != null) {
+                  Navigator.pushNamed(context, '/member');
+                }
+              },
               child: const Text('Login'),
             ),
             if (_errorMessage != null) ...[
@@ -102,6 +120,7 @@ class _LoginPageState extends State<LoginWidget> {
                 style: const TextStyle(color: Colors.red),
               ),
             ],
+
           ],
         ),
       ),
