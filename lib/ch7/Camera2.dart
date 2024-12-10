@@ -106,10 +106,10 @@ class TakePictureScreenState extends State<TakePictureScreen>
         ));
   }
 
-  Future<void> _initializeCamera() async {
+  Future<void> _initializeCamera(int id) async {
     if (widget.cameras.isNotEmpty) {
       _controller = CameraController(
-        widget.cameras[0],
+        widget.cameras[id],
         _selectedResolution,
       );
 
@@ -147,6 +147,27 @@ class TakePictureScreenState extends State<TakePictureScreen>
   }
 
   void showCameras() async {
+    List<ListTile> listTiles = [];
+
+    log.d('debug cameras: ${widget.cameras.length}');
+    for (CameraDescription camera in widget.cameras) {
+      IconData cameraIcon = Icons.photo_camera_back;
+      String cameraName = "back";
+      if (camera.lensDirection.name.toString().contains("front")){
+        cameraIcon = Icons.photo_camera_front;
+        cameraName = camera.lensDirection.name;
+      }
+      listTiles.add(ListTile(
+        leading: Icon(cameraIcon),
+        title:  Text(cameraName),
+        onTap: () {
+          _initializeCamera(widget.cameras.indexOf(camera));
+        },
+      ));
+      log.d('debug camera: ${camera.lensDirection} ${camera.lensDirection.index}');
+    }
+
+
     await showModalBottomSheet<void>(
       context: context,
       builder: (BuildContext context) {
@@ -154,22 +175,7 @@ class TakePictureScreenState extends State<TakePictureScreen>
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              ListTile(
-                leading: const Icon(Icons.camera),
-                title: const Text('Take a picture'),
-                onTap: () {
-                  Navigator.pop(context);
-                  // _takePicture();
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.camera),
-                title: const Text('Take a video'),
-                onTap: () {
-                  Navigator.pop(context);
-                  // _takeVideo();
-                },
-              ),
+              ...listTiles
             ],
           ),
         );
@@ -186,16 +192,16 @@ class TakePictureScreenState extends State<TakePictureScreen>
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               ListTile(
-                leading: const Icon(Icons.camera),
-                title: const Text('Take a picture'),
+                leading: const Icon(Icons.photo_camera),
+                title: const Text('Picture'),
                 onTap: () {
                   Navigator.pop(context);
                   // _takePicture();
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.camera),
-                title: const Text('Take a video'),
+                leading: const Icon(Icons.videocam),
+                title: const Text('video'),
                 onTap: () {
                   Navigator.pop(context);
                   // _takeVideo();
@@ -214,7 +220,7 @@ class TakePictureScreenState extends State<TakePictureScreen>
     });
 
     _controller.dispose();
-    _initializeCamera();
+    _initializeCamera(0);
   }
 
   void takePicture() async {
