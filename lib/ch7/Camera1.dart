@@ -20,9 +20,10 @@ class TakePictureScreen extends StatefulWidget {
   TakePictureScreenState createState() => TakePictureScreenState();
 }
 
-class TakePictureScreenState extends State<TakePictureScreen> {
+class TakePictureScreenState extends State<TakePictureScreen> with TickerProviderStateMixin {
   late CameraController _controller;
   late Future<void> _initializeControllerFuture;
+  late AnimationController _animateController;
 
   @override
   void initState() {
@@ -35,6 +36,19 @@ class TakePictureScreenState extends State<TakePictureScreen> {
       // Define the resolution to use.
       ResolutionPreset.medium,
     );
+
+    _animateController = AnimationController(
+      /// [AnimationController]s can be created with `vsync: this` because of
+      /// [TickerProviderStateMixin].
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    )..addListener(() {
+      setState(() {});
+    });
+
+    _animateController.repeat(reverse: true);
+
+    super.initState();
 
     // Next, initialize the controller. This returns a Future.
     _initializeControllerFuture = _controller.initialize();
@@ -62,7 +76,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
             return CameraPreview(_controller);
           } else {
             // Otherwise, display a loading indicator.
-            return const Center(child: CircularProgressIndicator());
+            return Center(child: CircularProgressIndicator(value: _animateController.value,));
           }
         },
       ),
