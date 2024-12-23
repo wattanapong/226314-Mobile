@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
+import 'package:path_provider/path_provider.dart';
 
 Logger log = Logger();
 
@@ -26,6 +27,14 @@ class TakePictureScreenState extends State<TakePictureScreen>
   late Future<void> _initializeControllerFuture;
   late AnimationController _animateController;
   ResolutionPreset _selectedResolution = ResolutionPreset.medium;
+  bool PictureMode = true;
+  bool isRecording = false;
+  final String _directory = '/storage/emulated/0/DCIM';
+
+  Future<String> getDCIMPath() async {
+    final Directory? directory = await getExternalStorageDirectory();
+    return "${directory!.parent.parent.parent.parent.path}/DCIM";
+  }
 
   @override
   void initState() {
@@ -96,10 +105,10 @@ class TakePictureScreenState extends State<TakePictureScreen>
                     child: const Icon(Icons.flip_camera_android)),
                 FloatingActionButton(
                     onPressed: showCameraOptions,
-                    child: const Icon(Icons.videocam)),
+                    child: const Icon(Icons.monochrome_photos)),
                 FloatingActionButton(
                     onPressed: takePicture,
-                    child: const Icon(Icons.camera_alt)),
+                    child:  Icon(PictureMode ? Icons.photo_camera : isRecording ? Icons.stop : Icons.videocam)),
                 ]
 
             )
@@ -195,16 +204,22 @@ class TakePictureScreenState extends State<TakePictureScreen>
                 leading: const Icon(Icons.photo_camera),
                 title: const Text('Picture'),
                 onTap: () {
+                  setState(() {
+                    PictureMode = true;
+                  });
                   Navigator.pop(context);
-                  // _takePicture();
+
                 },
               ),
               ListTile(
                 leading: const Icon(Icons.videocam),
                 title: const Text('video'),
                 onTap: () {
+                  setState(() {
+                    PictureMode = false;
+                  });
                   Navigator.pop(context);
-                  // _takeVideo();
+
                 },
               ),
             ],
@@ -228,24 +243,48 @@ class TakePictureScreenState extends State<TakePictureScreen>
       // Ensure that the camera is initialized.
       await _initializeControllerFuture;
 
-      // Attempt to take a picture and get the file `image`
-      // where it was saved.
-      final image = await _controller.takePicture();
+      if (PictureMode) {
+        final image = await _controller.takePicture();
 
-      log.d(image.path);
+        log.d(image.path);
 
-      if (!context.mounted) return;
+        if (!context.mounted) return;
 
-      // If the picture was taken, display it on a new screen.
-      await Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => DisplayPictureScreen(
-            // Pass the automatically generated path to
-            // the DisplayPictureScreen widget.
-            imagePath: image.path,
+        // If the picture was taken, display it on a new screen.
+        await Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) =>
+                DisplayPictureScreen(
+                  // Pass the automatically generated path to
+                  // the DisplayPictureScreen widget.
+                  imagePath: image.path,
+                ),
           ),
-        ),
-      );
+        );
+      }else{
+
+          setState(() {
+            isRecording = !isRecording;
+          });
+
+          if (isRecording) {
+            await _controller.startVideoRecording();
+
+          }else {
+            XFile savedVideo = await _controller.stopVideoRecording();
+            String dcimPath = await getDCIMPath();
+
+            Directory dcimDirectory = Directory(dcimPath);
+            if (!dcimDirectory.existsSync()) {
+              dcimDirectory.createSync(recursive: true);
+            }
+
+            String videoPath = '$dcimPath/${DateTime.now().millisecondsSinceEpoch}.mp4';
+            File(savedVideo.path).copySync(videoPath);
+
+            print('Video saved to $videoPath');
+          }
+      }
     } catch (e) {
       // If an error occurs, log the error to the console.
       print(e);
