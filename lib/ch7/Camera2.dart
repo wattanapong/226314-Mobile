@@ -5,10 +5,10 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 Logger log = Logger();
 
-// A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
   const TakePictureScreen({
     super.key,
@@ -29,16 +29,44 @@ class TakePictureScreenState extends State<TakePictureScreen>
   ResolutionPreset _selectedResolution = ResolutionPreset.medium;
   bool PictureMode = true;
   bool isRecording = false;
-  final String _directory = '/storage/emulated/0/DCIM';
+  String dcimPath = "";
 
-  Future<String> getDCIMPath() async {
-    final Directory? directory = await getExternalStorageDirectory();
-    return "${directory!.parent.parent.parent.parent.path}/DCIM";
+  Future<void> getDCIMPath() async {
+    log.d("Camera Storage: Requesting Permission");
+    String _dcimPath = "";
+    final status = await Permission.storage.request();
+    if (status.isGranted) {
+      log.d("Camera Storage: Granted");
+      final Directory? directory = await getExternalStorageDirectory();
+      _dcimPath = "${directory!.parent.parent.parent.parent.path}/DCIM";
+      Directory dcimDirectory = Directory(_dcimPath);
+      if (!dcimDirectory.existsSync()) {
+        dcimDirectory.createSync(recursive: true);
+      }
+
+    } else if (status.isPermanentlyDenied) {
+      log.d("Camera Storage: Denied");
+      openAppSettings();
+    }
+
+    dcimPath = _dcimPath;
+
+    log.d("Camera Storage: DCIMPATH2: $dcimPath $_dcimPath");
+
   }
 
   @override
-  void initState() {
+
+  void initState(){
     super.initState();
+
+    try {
+      getDCIMPath();
+    } catch (e) {
+      log.e('Error fetching data: $e');
+    }
+
+    log.d("Camera Storage: on initState: DCIMPATH1: $dcimPath");
 
     _controller = CameraController(
       widget.cameras[0],
@@ -73,17 +101,12 @@ class TakePictureScreenState extends State<TakePictureScreen>
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Take a picture')),
-        // You must wait until the controller is initialized before displaying the
-        // camera preview. Use a FutureBuilder to display a loading spinner until the
-        // controller has finished initializing.
         body: FutureBuilder<void>(
           future: _initializeControllerFuture,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
-              // If the Future is complete, display the preview.
               return CameraPreview(_controller);
             } else {
-              // Otherwise, display a loading indicator.
               return Center(child: CircularProgressIndicator(
                 value: _animateController.value,));
             }
@@ -242,11 +265,22 @@ class TakePictureScreenState extends State<TakePictureScreen>
     try {
       // Ensure that the camera is initialized.
       await _initializeControllerFuture;
+      String saveFile = "";
+      String SaveImg = "";
+      if (dcimPath != "") {
+          saveFile = '$dcimPath/${DateTime.now().millisecondsSinceEpoch}';
+          SaveImg = "$saveFile.jpg";
+      }
 
       if (PictureMode) {
-        final image = await _controller.takePicture();
-
-        log.d(image.path);
+        XFile savedImage = await _controller.takePicture();
+        if (SaveImg != "") {
+          File(savedImage.path).copySync(SaveImg);
+          log.d("Camera Capture: $SaveImg");
+        }else{
+          SaveImg = savedImage.path;
+          log.d("Camera Capture: $SaveImg");
+        }
 
         if (!context.mounted) return;
 
@@ -257,7 +291,7 @@ class TakePictureScreenState extends State<TakePictureScreen>
                 DisplayPictureScreen(
                   // Pass the automatically generated path to
                   // the DisplayPictureScreen widget.
-                  imagePath: image.path,
+                  imagePath: SaveImg,
                 ),
           ),
         );
@@ -272,14 +306,8 @@ class TakePictureScreenState extends State<TakePictureScreen>
 
           }else {
             XFile savedVideo = await _controller.stopVideoRecording();
-            String dcimPath = await getDCIMPath();
 
-            Directory dcimDirectory = Directory(dcimPath);
-            if (!dcimDirectory.existsSync()) {
-              dcimDirectory.createSync(recursive: true);
-            }
-
-            String videoPath = '$dcimPath/${DateTime.now().millisecondsSinceEpoch}.mp4';
+            String videoPath = '$saveFile.mp4';
             File(savedVideo.path).copySync(videoPath);
 
             print('Video saved to $videoPath');
@@ -291,8 +319,6 @@ class TakePictureScreenState extends State<TakePictureScreen>
     }
   }
 }
-
-
 
 // A widget that displays the picture taken by the user.
 class DisplayPictureScreen extends StatelessWidget {
