@@ -15,8 +15,8 @@ void main() => runApp(MaterialApp(
           //     ]
           // ),
           child: Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(width: 20),
                 Text('Left  '),
