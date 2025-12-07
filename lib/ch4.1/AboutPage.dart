@@ -1,8 +1,9 @@
 
-import '../utils/service.dart';
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatefulWidget {
+  const AboutPage({super.key});
+
 
   @override
   State createState() {

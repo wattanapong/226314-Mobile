@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
     final String password = _passwordController.text;
 
     // Replace with your server URL
-    const String serverURL = 'https://mobile.wattanapong.com/login';
+    const String serverURL = 'https://mobile.wattanapong.com/api/auth/login';
 
     try {
       final response = await http.post(
@@ -39,12 +39,12 @@ class _LoginPageState extends State<LoginPage> {
         final responseData = jsonDecode(response.body);
 
         final SharedPreferences prefs = await SharedPreferences.getInstance();
-        prefs.setString('name', responseData['user']['name']);
-        prefs.setString('email', responseData['user']['email']);
+        prefs.setString('name', responseData['member']['name']);
+        prefs.setString('email', responseData['member']['email']);
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Login successful! '
-               'Welcome ${responseData['user']['name']}')),
+               'Welcome ${responseData['member']['name']}')),
         );
 
         setState(() {
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     _emailController.text = "mobileinfo@cpe.ict.up.ac.th";
-    _passwordController.text = "mobile226314";
+    _passwordController.text = "1234";
     return Scaffold(
       appBar: AppBar(title: Text('Login')),
       body: Padding(
@@ -92,8 +92,8 @@ class _LoginPageState extends State<LoginPage> {
             ElevatedButton(
               onPressed: () async {
                  await _login();
-                if (result != null) {
-                  Navigator.pushNamed(context, '/member');
+                if (context.mounted && result != null && result!['member'] != null ) {
+                  Navigator.pushReplacementNamed(context, '/member');
                 }
               },
               child: const Text('Login'),

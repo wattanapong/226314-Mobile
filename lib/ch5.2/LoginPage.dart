@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
     final String password = _passwordController.text;
 
     // Replace with your server URL
-    const String serverURL = 'https://mobile.wattanapong.com/login';
+    const String serverURL = 'https://mobile.wattanapong.com/api/auth/login';
 
     try {
       final response = await http.post(
@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
         
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Login successful! '
-               'Welcome ${responseData['user']['name']}')),
+               'Welcome ${responseData['member']['name']}')),
         );
 
         setState(() {
@@ -107,8 +107,8 @@ class _LoginPageState extends State<LoginPage> {
             ElevatedButton(
               onPressed: () async {
                  await _login();
-                if (result != null) {
-                  Navigator.pushNamed(context, '/member');
+                if (context.mounted && result != null && result!['member'] != null ) {
+                  Navigator.pushReplacementNamed(context, '/member');
                 }
               },
               child: const Text('Login'),

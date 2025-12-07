@@ -1,6 +1,6 @@
-import 'ch6.2/LoginPage.dart';
-import 'ch6.2/RegisterPage.dart';
-import 'ch6.2/MemberPage.dart';
+import 'ch5.2/LoginPage.dart';
+import 'ch5.2/RegisterPage.dart';
+import 'ch5.2/MemberPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(LinkPage());

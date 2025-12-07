@@ -5,6 +5,46 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "5.1", 
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/home5.1.dart",        
+            "args": [
+                "--target",
+                "lib/home5.1.dart" 
+            ]
+        },
+        {
+            "name": "5.2",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/home5.2.dart",        
+            "args": [
+                "--target",
+                "lib/home5.2.dart" 
+            ]
+        },
+        {
+            "name": "5.3", 
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/home5.3.dart",        
+            "args": [
+                "--target",
+                "lib/home5.3.dart" 
+            ]
+        },
+        {
+            "name": "5.4", 
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/home5.4.dart",        
+            "args": [
+                "--target",
+                "lib/home5.4.dart" 
+            ]
+        },
+        {
             "name": "226314-Mobile",
             "request": "launch",
             "type": "dart"

@@ -6,6 +6,9 @@ import 'package:logger/logger.dart';
 Logger log = Logger();
 
 class LoginPage extends StatelessWidget {
+
+  const LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,23 +19,30 @@ class LoginPage extends StatelessWidget {
 }
 
 class LoginWidget extends StatefulWidget {
+
+  const LoginWidget({super.key});
+
   @override
-  _LoginPageState createState() => _LoginPageState();
+  State createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginWidget> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   String? _errorMessage;
+  Map<String, dynamic>? result;
 
   Future<void> _login() async {
     final String email = _emailController.text;
     final String password = _passwordController.text;
+    
 
     // Replace with your server URL
-    const String serverURL = 'https://mobile.wattanapong.com/login';
+    const String serverURL = 'https://mobile.wattanapong.com/api/auth/login';
 
     try {
+      final messager = ScaffoldMessenger.of(context);
+
       final response = await http.post(
         Uri.parse(serverURL),
         headers: <String, String> {
@@ -47,23 +57,32 @@ class _LoginPageState extends State<LoginWidget> {
       );
 
       if (response.statusCode == 200) {
+
         final responseData = jsonDecode(response.body);
         
-        ScaffoldMessenger.of(context).showSnackBar(
+        if (!context.mounted) { 
+          return;
+        }
+        
+        messager.showSnackBar(
           SnackBar(content: Text('Login successful! '
-               'Welcome ${responseData['user']['name']}')),
+               'Welcome ${responseData['member']['name']}')),
         );
-        //error can't use navigator across async
-        // Navigator.pushNamed(context, '/member');
+
+        setState(() {
+          result = responseData['member'];
+        });
+        
       } else {
-        print('failed');
+        
         final errorData = jsonDecode(response.body);
+        log.e(errorData['message']);
         setState(() {
           _errorMessage = errorData['message'];
         });
       }
     } catch (error) {
-      print('error $error');
+      log.e('error $error');
       setState(() {
         _errorMessage = 'An error occurred. Please try again. $error';
       });

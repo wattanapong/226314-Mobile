@@ -1,5 +1,4 @@
 
-import '../utils/service.dart';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,6 +8,8 @@ import 'Product.dart';
 final Logger log = Logger();
 
 class ProductGridViewPage extends StatefulWidget {
+  const ProductGridViewPage({super.key});
+
   @override
   State createState() => ProductGridViewPageState();
 }

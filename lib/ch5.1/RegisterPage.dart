@@ -13,8 +13,11 @@ class RegisterPage extends StatelessWidget {
 }
 
 class RegisterWidget extends StatefulWidget {
+
+  const RegisterWidget({super.key});
+
   @override
-  _RegisterPageState createState() => _RegisterPageState();
+  State createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterWidget> {
@@ -29,9 +32,12 @@ class _RegisterPageState extends State<RegisterWidget> {
     final String name = _nameController.text;
 
     // Replace with your server URL
-    const String serverURL = 'https://mobile.wattanapong.com/register';
+    const String serverURL = 'https://mobile.wattanapong.com/api/auth/register';
 
     try {
+
+      final messenger = ScaffoldMessenger.of(context);
+      
       final response = await http.post(
         Uri.parse(serverURL),
         headers: {'Content-Type': 'application/json'},
@@ -43,7 +49,7 @@ class _RegisterPageState extends State<RegisterWidget> {
 
       if (response.statusCode == 200) {
         final responseData = jsonDecode(response.body);
-        ScaffoldMessenger.of(context).showSnackBar(
+        messenger.showSnackBar(
           SnackBar(content: Text('Login successful! Welcome ${responseData['user']['name']}')),
         );
       } else {

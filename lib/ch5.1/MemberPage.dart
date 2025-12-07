@@ -6,6 +6,9 @@ import 'package:logger/logger.dart';
 Logger log = Logger();
 
 class MemberPage extends StatelessWidget {
+
+  const MemberPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,8 +19,11 @@ class MemberPage extends StatelessWidget {
 }
 
 class MemberWidget extends StatefulWidget {
+
+  const MemberWidget({super.key});
+
   @override
-  _MemberPageState createState() => _MemberPageState();
+  State createState() => _MemberPageState();
 }
 
 class _MemberPageState extends State<MemberWidget> {

@@ -1,5 +1,5 @@
 
-import 'package:mobile_software_development/ch5.2/BasePage.dart';
+import 'BasePage.dart';
 import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {

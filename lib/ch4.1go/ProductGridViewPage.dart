@@ -9,6 +9,8 @@ import 'package:go_router/go_router.dart';
 final Logger log = Logger();
 
 class ProductGridViewPage extends StatefulWidget {
+  const ProductGridViewPage({super.key});
+
   @override
   State createState() => ProductGridViewPageState();
 }

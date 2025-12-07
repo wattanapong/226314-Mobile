@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -16,35 +17,35 @@ class _LoginPageState extends State<LoginPage> {
   final _passwordController = TextEditingController();
   String? _errorMessage;
   Map<String, dynamic>? result;
+  final dio = Dio();
 
   Future<void> _login() async {
     final String email = _emailController.text;
     final String password = _passwordController.text;
 
     // Replace with your server URL
-    const String serverURL = 'https://mobile.wattanapong.com/login';
+    const String serverURL = 'https://mobile.wattanapong.com/api/auth/login';
 
     try {
-      final response = await http.post(
-        Uri.parse(serverURL),
-        headers: <String, String> {
-          'Content-Type': 'application/json; charset=UTF-8'},
-        body: jsonEncode({
+
+      final response = await dio.post(
+        serverURL,
+        data: {
           'email': email,
           'pass': password,
-        }),
+        },
       );
-
+      
       if (response.statusCode == 200) {
-        final responseData = jsonDecode(response.body);
+        final responseData = response.data;
 
         final SharedPreferences prefs = await SharedPreferences.getInstance();
-        prefs.setString('name', responseData['user']['name']);
-        prefs.setString('email', responseData['user']['email']);
+        prefs.setString('name', responseData['member']['name']);
+        prefs.setString('email', responseData['member']['email']);
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Login successful! '
-               'Welcome ${responseData['user']['name']}')),
+               'Welcome ${responseData['member']['name']}')),
         );
 
         setState(() {
@@ -55,16 +56,24 @@ class _LoginPageState extends State<LoginPage> {
         // Navigator.pushNamed(context, '/member');
       } else {
         print('failed');
-        final errorData = jsonDecode(response.body);
+        final errorData = response.data;
         setState(() {
           _errorMessage = errorData['message'];
         });
       }
-    } catch (error) {
-      print('error $error');
-      setState(() {
-        _errorMessage = 'An error occurred. Please try again. $error';
+    } on DioException catch (e) {
+      if (e.response != null){
+        log.e('Login failed: ${e.response?.statusCode} - ${e.response?.data}');
+        setState(() {
+         _errorMessage = e.response?.data["message"];
+        });
+      }
+      else{
+        setState(() {
+        _errorMessage = 'An error occurred. Please try again. ${e.message}';
       });
+      }
+      
     }
   }
 
@@ -92,8 +101,8 @@ class _LoginPageState extends State<LoginPage> {
             ElevatedButton(
               onPressed: () async {
                  await _login();
-                if (result != null) {
-                  Navigator.pushNamed(context, '/member');
+                if (context.mounted && result != null && result!['member'] != null ) {
+                  Navigator.pushReplacementNamed(context, '/member');
                 }
               },
               child: const Text('Login'),

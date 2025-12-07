@@ -4,10 +4,10 @@ void main() => runApp(BoxContainer());
 
 class BoxContainer extends StatelessWidget {
 
+  const BoxContainer({super.key}); 
+
   var itemWidth = 200.0;
   var itemHeight = 200.0;
-
-  BoxContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
