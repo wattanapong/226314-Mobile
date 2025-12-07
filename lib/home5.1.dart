@@ -1,10 +1,9 @@
-import 'ch5.1/HomePage.dart';
-import 'ch5.1/ProductGridViewPage.dart';
-import 'ch5.1/AboutPage.dart';
+import 'ch6.1/LoginPage.dart';
+import 'ch6.1/RegisterPage.dart';
+import 'ch6.1/MemberPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(LinkPage());
-
 
 class LinkPage extends StatelessWidget {
   @override
@@ -12,9 +11,9 @@ class LinkPage extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
-        '/product': (context)  =>  ProductGridViewPage(),
-        '/about': (context) => AboutPage(),
+        '/': (context) => LoginPage(),
+        '/register': (context)  =>  RegisterPage(),
+        '/member': (context) => MemberPage(),
       },
     );
   }
