@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 void main() => runApp(LinkPage());
 
 class LinkPage extends StatelessWidget {
+
+  const LinkPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

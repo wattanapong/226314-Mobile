@@ -45,6 +45,26 @@
             ]
         },
         {
+            "name": "4.1", 
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/home4.1.dart",        
+            "args": [
+                "--target",
+                "lib/home4.1.dart" 
+            ]
+        },
+        {
+            "name": "ex1",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/example1.dart",        
+            "args": [
+                "--target",
+                "lib/example1.dart" 
+            ]
+        },
+        {
             "name": "226314-Mobile",
             "request": "launch",
             "type": "dart"

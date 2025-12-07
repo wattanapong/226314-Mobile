@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import '../utils/db_helper.dart';
 
+
+final log = Logger();
+
 class ToDoListApp extends StatefulWidget {
+  const ToDoListApp({super.key});
   @override
   State createState() => _ToDoListAppState();
 }
@@ -64,18 +69,18 @@ class _ToDoListAppState extends State<ToDoListApp> {
                   checkboxValues.add(_tasks[index]['isDone'] == 1? true : false);
                 }
 
-                print("is done first stage $_tasks[index]['isDone']");
+                log.d("is done first stage $_tasks[index]['isDone']");
                 return CheckboxListTile(
                   title: Text(_tasks[index]['title']),
                   value: checkboxValues[index],
                   onChanged: (bool? value) async {
-                    print("$index $value");
+                    log.d("$index $value");
                     int updatedStatus = await DBHelper.instance.updateTask(
                         _tasks[index]['id'], value!?1:0);
                     setState(() {
                       checkboxValues[index] = value ? true : false;
                     });
-                    print('updatedStatus $updatedStatus');
+                    log.d('updatedStatus $updatedStatus');
                   },
                 );
               },
@@ -83,7 +88,10 @@ class _ToDoListAppState extends State<ToDoListApp> {
           ),
         ],
       ),
+      
     );
   }
+  
+  
 }
 
