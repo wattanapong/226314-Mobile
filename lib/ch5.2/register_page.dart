@@ -3,6 +3,9 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class RegisterPage extends StatelessWidget {
+
+  const RegisterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,8 +16,11 @@ class RegisterPage extends StatelessWidget {
 }
 
 class RegisterWidget extends StatefulWidget {
+
+  const RegisterWidget({super.key});
+
   @override
-  _RegisterPageState createState() => _RegisterPageState();
+  State<RegisterWidget> createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterWidget> {
@@ -26,7 +32,7 @@ class _RegisterPageState extends State<RegisterWidget> {
   Future<void> _login() async {
     final String email = _emailController.text;
     final String password = _passwordController.text;
-    final String name = _nameController.text;
+    // final String name = _nameController.text;
 
     // Replace with your server URL
     const String serverURL = 'https://mobile.wattanapong.com/register';
@@ -42,6 +48,9 @@ class _RegisterPageState extends State<RegisterWidget> {
       );
 
       if (response.statusCode == 200) {
+
+        if (!mounted) return;
+
         final responseData = jsonDecode(response.body);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Login successful! Welcome ${responseData['user']['name']}')),

@@ -3,6 +3,9 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class RegisterPage extends StatelessWidget {
+  
+  const RegisterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +32,7 @@ class _RegisterPageState extends State<RegisterWidget> {
   Future<void> _login() async {
     final String email = _emailController.text;
     final String password = _passwordController.text;
-    final String name = _nameController.text;
+    // final String name = _nameController.text;
 
     // Replace with your server URL
     const String serverURL = 'https://mobile.wattanapong.com/api/auth/register';

@@ -1,15 +1,16 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Logger log = Logger();
 
 class LoginPage extends StatefulWidget {
+  
+  const LoginPage({super.key});
+
   @override
-  _LoginPageState createState() => _LoginPageState();
+  State createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
@@ -42,6 +43,8 @@ class _LoginPageState extends State<LoginPage> {
         final SharedPreferences prefs = await SharedPreferences.getInstance();
         prefs.setString('name', responseData['member']['name']);
         prefs.setString('email', responseData['member']['email']);
+
+        if (!mounted) return;
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Login successful! '

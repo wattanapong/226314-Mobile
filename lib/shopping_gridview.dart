@@ -29,11 +29,12 @@ void main() async {
 }
 
 class Shopping extends StatelessWidget {
-  List<Product> products;
-  var itemWidth = 200.0;
-  var itemHeight = 200.0;
 
-  Shopping({super.key, required this.products});
+  const Shopping({super.key, required this.products});
+  
+  final List<Product> products;
+  final double itemWidth = 200.0;
+  final double itemHeight = 200.0;
 
   @override
   Widget build(BuildContext context) {

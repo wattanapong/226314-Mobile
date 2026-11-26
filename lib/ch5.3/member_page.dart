@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MemberPage extends StatefulWidget {
+  
+  const MemberPage({super.key});
+
   @override
   State createState() => _MemberPageState();
 }

@@ -51,6 +51,8 @@ class _LoginPageState extends State<LoginPage> {
         prefs.setString('name', responseData['member']['name']);
         prefs.setString('email', responseData['member']['email']);
 
+        if (!mounted) return;
+
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Login successful! '
                'Welcome ${responseData['member']['name']}')),

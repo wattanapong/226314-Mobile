@@ -38,7 +38,7 @@ dependencies:
 
   logger: ^2.6.2
   http: ^1.2.2
-  shared_preferences: ^2.3.3
+  shared_preferences: ^2.5.5
   sqflite: ^2.4.1
   camera: ^0.11.0+2
   path_provider: ^2.1.5
