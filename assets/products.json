@@ -1,32 +1,947 @@
 [
-  {
-    "name": "CORE ULTRA 5 245K",
-    "price": 11590,
-    "image": "https://img.advice.co.th/images_nas/pic_product4/A0163676/A0163676_1.jpg"
-  },
-  {
-    "name": "CORE ULTRA 7 265K",
-    "price": 15490,
-    "image": "https://img.advice.co.th/images_nas/pic_product4/A0163679/A0163679_1.jpg"
-  },
-  {
-    "name": "INTEL CORE I9-14900KS",
-    "price": 26590,
-    "image": "https://img.advice.co.th/images_nas/pic_product4/A0158653/A0158653_1.jpg"
-  },
-  {
-    "name": "AMD RYZEN THREADRIPPER 7980X",
-    "price": 202900,
-    "image": "https://img.advice.co.th/images_nas/pic_product4/A0156417/A0156417_1.jpg"
-  },
-  {
-    "name": "AMD AM5 RYZEN 9 7950X3D",
-    "price": 22410,
-    "image": "https://img.advice.co.th/images_nas/pic_product4/A0161217/A0161217_1.jpg"
-  },
-  {
-    "name": "AMD AM5 RYZEN 9 9900X",
-    "price": 17840,
-    "image": "https://img.advice.co.th/images_nas/pic_product4/A0149593/A0149593_1.jpg"
-  }
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0134727/A0134727_1.jpg",
+        "price_sale": 1870,
+        "price_start": 1890,
+        "price_diff": 20,
+        "product": "CPU AMD AM4 RYZEN 3 3200G (NEXT)",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0127432/A0127432_1.jpg",
+        "price_sale": 1920,
+        "price_start": 1950,
+        "price_diff": 30,
+        "product": "CPU AMD AM4 RYZEN 3 3200G",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0133830/A0133830_1.jpg",
+        "price_sale": 2160,
+        "price_start": 2190,
+        "price_diff": 30,
+        "product": "CPU AMD AM4 RYZEN 5 3400G (NEXT)",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0127433/A0127433_1.jpg",
+        "price_sale": 2230,
+        "price_start": 2250,
+        "price_diff": 20,
+        "product": "CPU AMD AM4 RYZEN 5 3400G",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0145376/A0145376_1.jpg",
+        "price_sale": 3160,
+        "price_start": 3190,
+        "price_diff": 30,
+        "product": "CPU AMD AM4 RYZEN 5 5500 (NEXT)",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0143469/A0143469_1.jpg",
+        "price_sale": 3490,
+        "price_start": 3490,
+        "price_diff": 0,
+        "product": "CPU AMD AM4 RYZEN 5 5500",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0188850/A0188850_1.jpg",
+        "price_sale": 3660,
+        "price_start": 3690,
+        "price_diff": 30,
+        "product": "CPU AMD AM4 RYZEN 5 5500F",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157520/A0157520_1.jpg",
+        "price_sale": 4590,
+        "price_start": 4590,
+        "price_diff": 0,
+        "product": "CPU AMD AM4 RYZEN 5 5500GT",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0182468/A0182468_1.jpg",
+        "price_sale": 6930,
+        "price_start": 6990,
+        "price_diff": 60,
+        "product": "CPU AMD AM4 RYZEN 5 5500X3D (NEXT)",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0155280/A0155280_1.jpg",
+        "price_sale": 4460,
+        "price_start": 4590,
+        "price_diff": 130,
+        "product": "CPU AMD AM4 RYZEN 5 5600 (NEXT)",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0143472/A0143472_1.jpg",
+        "price_sale": 4890,
+        "price_start": 4890,
+        "price_diff": 0,
+        "product": "CPU AMD AM4 RYZEN 5 5600",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157521/A0157521_1.jpg",
+        "price_sale": 5290,
+        "price_start": 5290,
+        "price_diff": 0,
+        "product": "CPU AMD AM4 RYZEN 5 5600GT",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0187316/A0187316_1.jpg",
+        "price_sale": 4900,
+        "price_start": 4950,
+        "price_diff": 50,
+        "product": "CPU AMD AM4 RYZEN 5 5600XT (NEXT)",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0187854/A0187854_1.jpg",
+        "price_sale": 7290,
+        "price_start": 7290,
+        "price_diff": 0,
+        "product": "CPU AMD AM4 RYZEN 5 5600X3D",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0178721/A0178721_1.jpg",
+        "price_sale": 5640,
+        "price_start": 5690,
+        "price_diff": 50,
+        "product": "CPU AMD AM4 RYZEN 7 5700X (NEXT)",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0138978/A0138978_1.jpg",
+        "price_sale": 6930,
+        "price_start": 6990,
+        "price_diff": 60,
+        "product": "CPU AMD AM4 RYZEN 7 5700G (NEXT)",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0184065/A0184065_1.jpg",
+        "price_sale": 12990,
+        "price_start": 12990,
+        "price_diff": 0,
+        "product": "CPU AMD AM4 RYZEN 7 5800X3D 10TH",
+        "socket": "AMD AM4",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157343/A0157343_1.jpg",
+        "price_sale": 4950,
+        "price_start": 4990,
+        "price_diff": 40,
+        "product": "CPU AMD AM5 RYZEN 5 7500F (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0162344/A0162344_1.jpg",
+        "price_sale": 4990,
+        "price_start": 4990,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 5 7500F",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0164520/A0164520_1.jpg",
+        "price_sale": 3950,
+        "price_start": 3990,
+        "price_diff": 40,
+        "product": "CPU AMD AM5 RYZEN 5 8400F (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157524/A0157524_1.jpg",
+        "price_sale": 5690,
+        "price_start": 5690,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 5 8500G",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157525/A0157525_1.jpg",
+        "price_sale": 6890,
+        "price_start": 6890,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 5 8600G",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157526/A0157526_1.jpg",
+        "price_sale": 10290,
+        "price_start": 10290,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 7 8700G",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0177003/A0177003_1.jpg",
+        "price_sale": 8110,
+        "price_start": 8190,
+        "price_diff": 80,
+        "product": "CPU AMD AM5 RYZEN 5 9600X (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0161215/A0161215_1.jpg",
+        "price_sale": 8690,
+        "price_start": 8690,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 5 9600X",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0177004/A0177004_1.jpg",
+        "price_sale": 8410,
+        "price_start": 8490,
+        "price_diff": 80,
+        "product": "CPU AMD AM5 RYZEN 7 7700 (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0183834/A0183834_1.jpg",
+        "price_sale": 12290,
+        "price_start": 12290,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 7 7700X3D",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0168235/A0168235_1.jpg",
+        "price_sale": 11390,
+        "price_start": 11790,
+        "price_diff": 400,
+        "product": "CPU AMD AM5 RYZEN 7 7800X3D (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0150589/A0150589_1.jpg",
+        "price_sale": 12590,
+        "price_start": 12590,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 7 7800X3D",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0167692/A0167692_1.jpg",
+        "price_sale": 6230,
+        "price_start": 6290,
+        "price_diff": 60,
+        "product": "CPU AMD AM5 RYZEN 7 8700F (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0168683/A0168683_1.jpg",
+        "price_sale": 11090,
+        "price_start": 11190,
+        "price_diff": 100,
+        "product": "CPU AMD AM5 RYZEN 7 9700X (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0161216/A0161216_1.jpg",
+        "price_sale": 12390,
+        "price_start": 12390,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 7 9700X",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0169016/A0169016_1.jpg",
+        "price_sale": 15860,
+        "price_start": 15990,
+        "price_diff": 130,
+        "product": "CPU AMD AM5 RYZEN 7 9800X3D (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0164411/A0164411_1.jpg",
+        "price_sale": 16990,
+        "price_start": 16990,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 7 9800X3D",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0179201/A0179201_1.jpg",
+        "price_sale": 18790,
+        "price_start": 18790,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 7 9850X3D",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0165535/A0165535_1.jpg",
+        "price_sale": 22090,
+        "price_start": 22090,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 9 9900X3D",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0161218/A0161218_1.jpg",
+        "price_sale": 21890,
+        "price_start": 21890,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 9 9950X",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0168684/A0168684_1.jpg",
+        "price_sale": 24760,
+        "price_start": 24990,
+        "price_diff": 230,
+        "product": "CPU AMD AM5 RYZEN 9 9950X3D (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0165534/A0165534_1.jpg",
+        "price_sale": 26990,
+        "price_start": 26990,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 9 9950X3D",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0181392/A0181392_1.jpg",
+        "price_sale": 34590,
+        "price_start": 34590,
+        "price_diff": 0,
+        "product": "CPU AMD AM5 RYZEN 9 9950X3D2",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0171424/A0171424_1.jpg",
+        "price_sale": 59900,
+        "price_start": 59900,
+        "price_diff": 0,
+        "product": "CPU AMD RYZEN THREADRIPPER 9960X",
+        "socket": "AMD sWRX8",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0171426/A0171426_1.jpg",
+        "price_sale": 100900,
+        "price_start": 100900,
+        "price_diff": 0,
+        "product": "CPU AMD RYZEN THREADRIPPER 9970X",
+        "socket": "AMD sWRX8",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0171428/A0171428_1.jpg",
+        "price_sale": 199900,
+        "price_start": 199900,
+        "price_diff": 0,
+        "product": "CPU AMD RYZEN THREADRIPPER 9980X",
+        "socket": "AMD sWRX8",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0171423/A0171423_1.jpg",
+        "price_sale": 66900,
+        "price_start": 66900,
+        "price_diff": 0,
+        "product": "CPU AMD RYZEN THREADRIPPER PRO 9955WX",
+        "socket": "AMD sWRX8",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0171425/A0171425_1.jpg",
+        "price_sale": 114900,
+        "price_start": 114900,
+        "price_diff": 0,
+        "product": "CPU AMD RYZEN THREADRIPPER PRO 9965WX",
+        "socket": "AMD sWRX8",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0171427/A0171427_1.jpg",
+        "price_sale": 165900,
+        "price_start": 165900,
+        "price_diff": 0,
+        "product": "CPU AMD RYZEN THREADRIPPER PRO 9975WX",
+        "socket": "AMD sWRX8",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0171422/A0171422_1.jpg",
+        "price_sale": 319900,
+        "price_start": 319900,
+        "price_diff": 0,
+        "product": "CPU AMD RYZEN THREADRIPPER PRO 9985WX",
+        "socket": "AMD sWRX8",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0171429/A0171429_1.jpg",
+        "price_sale": 469000,
+        "price_start": 469000,
+        "price_diff": 0,
+        "product": "CPU AMD RYZEN THREADRIPPER PRO 9995WX",
+        "socket": "AMD sWRX8",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0187317/A0187317_1.jpg",
+        "price_sale": 32300,
+        "price_start": 32590,
+        "price_diff": 290,
+        "product": "CPU AMD AM5 RYZEN 9 9950X3D2 (NEXT)",
+        "socket": "AMD AM5",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0165530/A0165530_1.jpg",
+        "price_sale": 4500,
+        "price_start": 4690,
+        "price_diff": 190,
+        "product": "CPU INTEL CORE ULTRA 5 225F LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0165529/A0165529_1.jpg",
+        "price_sale": 5350,
+        "price_start": 5590,
+        "price_diff": 240,
+        "product": "CPU INTEL CORE ULTRA 5 225 LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0165531/A0165531_1.jpg",
+        "price_sale": 8250,
+        "price_start": 8490,
+        "price_diff": 240,
+        "product": "CPU INTEL CORE ULTRA 5 235 LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0163677/A0163677_1.jpg",
+        "price_sale": 6540,
+        "price_start": 6750,
+        "price_diff": 210,
+        "product": "CPU INTEL CORE ULTRA 5 245KF LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0177000/A0177000_1.jpg",
+        "price_sale": 6650,
+        "price_start": 6790,
+        "price_diff": 140,
+        "product": "CPU CORE ULTRA 5 245K LGA 1851 (NEXT)",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0180479/A0180479_1.jpg",
+        "price_sale": 6940,
+        "price_start": 6990,
+        "price_diff": 50,
+        "product": "CPU INTEL CORE ULTRA 5 250KF PLUS LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0182470/A0182470_1.jpg",
+        "price_sale": 7530,
+        "price_start": 7590,
+        "price_diff": 60,
+        "product": "CPU CORE ULTRA 5 250K PLUS LGA 1851 (NEXT)",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0180478/A0180478_1.jpg",
+        "price_sale": 7130,
+        "price_start": 7190,
+        "price_diff": 60,
+        "product": "CPU INTEL CORE ULTRA 5 250K PLUS LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0165537/A0165537_1.jpg",
+        "price_sale": 7930,
+        "price_start": 7990,
+        "price_diff": 60,
+        "product": "CPU INTEL CORE ULTRA 7 265F LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0163678/A0163678_1.jpg",
+        "price_sale": 9910,
+        "price_start": 9990,
+        "price_diff": 80,
+        "product": "CPU INTEL CORE ULTRA 7 265KF LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0165532/A0165532_1.jpg",
+        "price_sale": 12660,
+        "price_start": 12750,
+        "price_diff": 90,
+        "product": "CPU INTEL CORE ULTRA 7 265 LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0143420/A0143420_1.jpg",
+        "price_sale": 3160,
+        "price_start": 3190,
+        "price_diff": 30,
+        "product": "CPU CORE I3-12100F LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0142041/A0142041_1.jpg",
+        "price_sale": 4150,
+        "price_start": 4290,
+        "price_diff": 140,
+        "product": "CPU INTEL CORE I3-12100 LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0185862/A0185862_1.jpg",
+        "price_sale": 2960,
+        "price_start": 2990,
+        "price_diff": 30,
+        "product": "CPU CORE I3-12100 LGA 1700 (NEXT-NO-FAN)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0143421/A0143421_1.jpg",
+        "price_sale": 4140,
+        "price_start": 4190,
+        "price_diff": 50,
+        "product": "CPU CORE I3-12100 LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0158292/A0158292_1.jpg",
+        "price_sale": 3570,
+        "price_start": 3590,
+        "price_diff": 20,
+        "product": "CPU CORE I3-14100F LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0177001/A0177001_1.jpg",
+        "price_sale": 9920,
+        "price_start": 9990,
+        "price_diff": 70,
+        "product": "CPU CORE ULTRA 7 265K LGA 1851 (NEXT)",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0163679/A0163679_1.jpg",
+        "price_sale": 11610,
+        "price_start": 11690,
+        "price_diff": 80,
+        "product": "CPU INTEL CORE ULTRA 7 265K LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0182469/A0182469_1.jpg",
+        "price_sale": 10320,
+        "price_start": 10390,
+        "price_diff": 70,
+        "product": "CPU CORE ULTRA 7 270K PLUS LGA 1851 (NEXT)",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0180477/A0180477_1.jpg",
+        "price_sale": 10790,
+        "price_start": 10890,
+        "price_diff": 100,
+        "product": "CPU INTEL CORE ULTRA 7 270K PLUS LGA 1851",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0177002/A0177002_1.jpg",
+        "price_sale": 18840,
+        "price_start": 18990,
+        "price_diff": 150,
+        "product": "CPU CORE ULTRA 9 285K LGA 1851 (NEXT)",
+        "socket": "INTEL 1851",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0156720/A0156720_1.jpg",
+        "price_sale": 3340,
+        "price_start": 3450,
+        "price_diff": 110,
+        "product": "CPU INTEL CORE I3-14100F LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0183532/A0183532_1.jpg",
+        "price_sale": 3440,
+        "price_start": 3690,
+        "price_diff": 250,
+        "product": "CPU CORE I3-14100 LGA 1700 (NEXT-NO-FAN)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157340/A0157340_1.jpg",
+        "price_sale": 3850,
+        "price_start": 3890,
+        "price_diff": 40,
+        "product": "CPU CORE I3-14100 LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0156719/A0156719_1.jpg",
+        "price_sale": 3980,
+        "price_start": 4190,
+        "price_diff": 210,
+        "product": "CPU INTEL CORE I3-14100 LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0143422/A0143422_1.jpg",
+        "price_sale": 4310,
+        "price_start": 4350,
+        "price_diff": 40,
+        "product": "CPU CORE I5-12400F LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0140933/A0140933_1.jpg",
+        "price_sale": 4355,
+        "price_start": 4590,
+        "price_diff": 235,
+        "product": "CPU INTEL CORE I5-12400F LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0187849/A0187849_1.jpg",
+        "price_sale": 5430,
+        "price_start": 5490,
+        "price_diff": 60,
+        "product": "CPU CORE I5-12400 LGA 1700 (NEXT-NO-FAN)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0143423/A0143423_1.jpg",
+        "price_sale": 5300,
+        "price_start": 5350,
+        "price_diff": 50,
+        "product": "CPU CORE I5-12400 LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0148574/A0148574_1.jpg",
+        "price_sale": 5550,
+        "price_start": 5590,
+        "price_diff": 40,
+        "product": "CPU CORE I5-13400F LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0183530/A0183530_1.jpg",
+        "price_sale": 4740,
+        "price_start": 4790,
+        "price_diff": 50,
+        "product": "CPU CORE I5-14400F LGA 1700 (NEXT-NO-FAN)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157341/A0157341_1.jpg",
+        "price_sale": 4740,
+        "price_start": 4790,
+        "price_diff": 50,
+        "product": "CPU CORE I5-14400F LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0156722/A0156722_1.jpg",
+        "price_sale": 4810,
+        "price_start": 4990,
+        "price_diff": 180,
+        "product": "CPU INTEL CORE I5-14400F LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0185863/A0185863_1.jpg",
+        "price_sale": 5140,
+        "price_start": 5190,
+        "price_diff": 50,
+        "product": "CPU CORE I5-14400 LGA 1700 (NEXT-NO-FAN)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0157342/A0157342_1.jpg",
+        "price_sale": 5640,
+        "price_start": 5690,
+        "price_diff": 50,
+        "product": "CPU CORE I5-14400 LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0156721/A0156721_1.jpg",
+        "price_sale": 5770,
+        "price_start": 5990,
+        "price_diff": 220,
+        "product": "CPU INTEL CORE I5-14400 LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0156723/A0156723_1.jpg",
+        "price_sale": 8150,
+        "price_start": 8490,
+        "price_diff": 340,
+        "product": "CPU INTEL CORE I5-14500 LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0166818/A0166818_1.jpg",
+        "price_sale": 6930,
+        "price_start": 6990,
+        "price_diff": 60,
+        "product": "CPU CORE I7-12700F LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0144602/A0144602_1.jpg",
+        "price_sale": 9290,
+        "price_start": 9350,
+        "price_diff": 60,
+        "product": "CPU CORE I7-12700 LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0179374/A0179374_1.jpg",
+        "price_sale": 10420,
+        "price_start": 10490,
+        "price_diff": 70,
+        "product": "CPU CORE I7-14700F LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0156725/A0156725_1.jpg",
+        "price_sale": 9590,
+        "price_start": 9990,
+        "price_diff": 400,
+        "product": "CPU INTEL CORE I7-14700F LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0137080/A0137080_1.jpg",
+        "price_sale": 1770,
+        "price_start": 1790,
+        "price_diff": 20,
+        "product": "CPU PENTIUM GOLD G6405 LGA 1200 (NEXT)",
+        "socket": "INTEL 1200",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0134246/A0134246_1.jpg",
+        "price_sale": 1770,
+        "price_start": 1790,
+        "price_diff": 20,
+        "product": "CPU INTEL PENTIUM G6400 LGA 1200 (NEXT)",
+        "socket": "INTEL 1200",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0183533/A0183533_1.jpg",
+        "price_sale": 10510,
+        "price_start": 10590,
+        "price_diff": 80,
+        "product": "CPU CORE I7-14700 LGA 1700 (NEXT-NO-FAN)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0156724/A0156724_1.jpg",
+        "price_sale": 10480,
+        "price_start": 10890,
+        "price_diff": 410,
+        "product": "CPU INTEL CORE I7-14700 LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0185864/A0185864_1.jpg",
+        "price_sale": 11490,
+        "price_start": 11590,
+        "price_diff": 100,
+        "product": "CPU CORE I7-14700KF LGA 1700 (NEXT-NO-FAN)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0179743/A0179743_1.jpg",
+        "price_sale": 11820,
+        "price_start": 11890,
+        "price_diff": 70,
+        "product": "CPU CORE I7-14700KF LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0154876/A0154876_1.jpg",
+        "price_sale": 10610,
+        "price_start": 10990,
+        "price_diff": 380,
+        "product": "CPU INTEL CORE I7-14700KF LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0177310/A0177310_1.jpg",
+        "price_sale": 11500,
+        "price_start": 11590,
+        "price_diff": 90,
+        "product": "CPU CORE I7-14700K LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0156727/A0156727_1.jpg",
+        "price_sale": 16825,
+        "price_start": 17400,
+        "price_diff": 575,
+        "product": "CPU INTEL CORE I9-14900F LGA 1700",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0168237/A0168237_1.jpg",
+        "price_sale": 15890,
+        "price_start": 15990,
+        "price_diff": 100,
+        "product": "CPU CORE I9-14900K LGA 1700 (NEXT)",
+        "socket": "INTEL 1700",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0135575/A0135575_1.jpg",
+        "price_sale": 5440,
+        "price_start": 5490,
+        "price_diff": 50,
+        "product": "CPU CORE I7-10700F LGA 1200 (NEXT)",
+        "socket": "INTEL 1200",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0120395/A0120395_1.jpg",
+        "price_sale": 2620,
+        "price_start": 2650,
+        "price_diff": 30,
+        "product": "CPU CORE I5-8400 LGA 1151V2 (NEXT)",
+        "socket": "INTEL 1151V2",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0127538/A0127538_1.jpg",
+        "price_sale": 3150,
+        "price_start": 3190,
+        "price_diff": 40,
+        "product": "CPU CORE I5-9400 LGA 1151V2 (NEXT)",
+        "socket": "INTEL 1151V2",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0120394/A0120394_1.jpg",
+        "price_sale": 1260,
+        "price_start": 1290,
+        "price_diff": 30,
+        "product": "CPU CORE I3-7100 LGA 1151 (NEXT)",
+        "socket": "INTEL 1151",
+        "category": "CPU"
+    },
+    {
+        "pic_url": "https://img.advice.co.th/images_nas/pic_product4/A0067325/A0067325_1.jpg",
+        "price_sale": 1450,
+        "price_start": 1490,
+        "price_diff": 40,
+        "product": "CPU CORE I5-4460 LGA 1150 (NEXT)",
+        "socket": "INTEL 1150",
+        "category": "CPU"
+    }
 ]
